@@ -17,24 +17,12 @@ class LinkList extends Component {
         }
       }
     `;
-    const linksToRender = [
-      {
-        id: "1",
-        description: "Prisma turns your database into a GraphQL API 😎",
-        url: "https://www.prismagraphql.com"
-      },
-      {
-        id: "2",
-        description: "The best GraphQL client",
-        url: "https://www.apollographql.com/docs/react/"
-      }
-    ];
 
     return (
       <Query query={FEED_QUERY}>
         {({ loading, error, data }) => {
           if (loading) return <div>Fetching</div>;
-          if (error) return <div>Error</div>;
+          if (error) return <div>Error {console.log(error)}</div>;
           const linksToRender = data.feed.links;
 
           return (
