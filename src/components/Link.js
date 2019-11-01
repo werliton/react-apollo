@@ -3,7 +3,7 @@ import React from "react";
 export const Link = ({ link }) => (
   <>
     <div>
-      {link.description} ({link.url})
+      <li>{link.description} ({link.url})</li>
     </div>
   </>
 );

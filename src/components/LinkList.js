@@ -27,9 +27,9 @@ class LinkList extends Component {
 
           return (
             <div>
-              {linksToRender.map(link => (
-                <Link key={link.id} link={link} />
-              ))}
+              <ol>
+                {linksToRender.map(link => <Link key={link.id} link={link} />)}
+              </ol>
             </div>
           );
         }}
